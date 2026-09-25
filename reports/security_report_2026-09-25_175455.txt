@@ -1,0 +1,48 @@
+SECURITY LOG ANALYSIS REPORT
+============================
+
+Report Generated: 2026-09-25 17:54:55 UTC
+
+Log Files Analyzed:
+-------------------
+- auth.log
+- auth2.log
+
+Total log entries: 19
+Failed login attempts: 13
+
+Failed Attempts by IP:
+----------------------
+192.168.1.50: 3 failed attempts
+10.0.0.25: 5 failed attempts
+172.16.0.100: 2 failed attempts
+192.168.1.60: 3 failed attempts
+
+Potentially Suspicious Activity:
+---------------------------------
+ALERT [MEDIUM]: 192.168.1.50 has 3 failed login attempts
+ALERT [HIGH]: 10.0.0.25 has 5 failed login attempts
+ALERT [MEDIUM]: 192.168.1.60 has 3 failed login attempts
+
+Failed Attempts by Username:
+----------------------------
+admin: 7 failed attempts
+root: 4 failed attempts
+guest: 2 failed attempts
+
+Possible Account Compromise:
+----------------------------
+WARNING: Successful login from 10.0.0.25 after repeated failed attempts against account admin (Source: auth.log)
+WARNING: Successful login from 192.168.1.60 after repeated failed attempts against account admin (Source: auth2.log)
+
+Risk Summary:
+------------
+IPs with failed login activity: 4
+IPs exceeding failed-login threshold: 3
+Possible account compromise events: 2
+Overall risk score: 17
+Overall risk rating: HIGH
+
+Analyst Conclusion:
+------------------
+The log analysis identified multiple IP addresses with repeated failed login activity. Further investigation is recommended.
