@@ -31,23 +31,29 @@ The primary goals of this project are to:
 - GitHub
 - Windows 11
 
-# Project Structure
+## Project Structure
 
-Python-Security-Log_Analyzer
+```text
+Python_Security_Log_Analyzer
 │
 ├── log_analyzer.py
 ├── README.md
 │
 ├── reports
-│   ├── security_report_....txt
-│   └── security_report_....txt
+│   ├── security_report_2026-09-25_175455.txt
+│   ├── security_report_2026-09-25_175519.txt
+│   └── security_report_2026-09-25_182732.txt
 │
 ├── sample_logs
 │   ├── auth.log
 │   └── auth2.log
 │
 └── screenshots
-
+    ├── 01_project_structure.png
+    ├── 02_sample_authentication_logs.png
+    ├── 03_analyzer_execution.png
+    └── 04_generated_security_report.png
+```
 
 # How It Works
 
@@ -247,22 +253,22 @@ The following screenshots demonstrate the development, execution, and output of 
 
 The project is organized into separate directories for sample authentication logs, generated security reports, screenshots, source code, and documentation.
 
-![Project Structure](screenshots/01-project-structure.png)
+![Project Structure](screenshots/01_project_structure.png)
 
 # Sample Authentication Logs
 
 Synthetic authentication logs provide successful and failed login events containing usernames and IP addresses for the analyzer to process.
 
-![Sample Authentication Logs](screenshots/02-sample-authentication-logs.png)
+![Sample Authentication Logs](screenshots/02_sample_authentication_logs.png)
 
 # Security Log Analyzer Execution
 
 The Python script processes the authentication logs and identifies failed login activity, suspicious IP addresses, and potential account compromise events.
 
-![Analyzer Execution](screenshots/03-analyzer-execution.png)
+![Analyzer Execution](screenshots/03_analyzer_execution.png)
 
 # Generated Security Report
 
 After completing the analysis, the program automatically generates a timestamped security report containing detected activity, risk scoring, an overall risk rating, and an analyst conclusion.
 
-![Generated Security Report](screenshots/04-generated-security-report.png)
+![Generated Security Report](screenshots/04_generated_security_report.png)
